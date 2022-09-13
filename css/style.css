@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#grilla {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "header header"
+        "main section"
+        "footer footer"
+    ;
+}
+
+/* AQUI DECLARAMOS LAS GRID AREAS */
+
+header {
+    background-color: rgb(255, 243, 255);
+    grid-area: header;
+
+}
+
+main {
+    grid-area: main;
+    
+}
+
+section {
+
+    grid-area: section;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(255, 255, 255);
+}
+
+/* ----------HEADER---------- */
+
+.logo_img {
+    width: 195px;
+    height: 60px;
+    margin-top: 25px;
+    margin-left: 100px;
+}
+
+.header {
+    background-color: rgb(255, 243, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.header nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 15px;
+    margin-right: 80px;
+
+}
+
+.header nav ul li {
+    padding: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(57, 57, 147);
+
+}
+
+
+a,
+a:active {
+    text-decoration: none;
+    color: rgb(56, 56, 146);
+}
+
+/* ----------FIN DE HEADER---------- */
+
+
+
+/* ---------------COMIENZA HOME---------- */
+
+.contenido {  
+    color: rgb(50, 50, 129);
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+
+.titulo{
+    display: flex;
+    margin-top: 150px;
+    margin-left: 100px;
+    margin-right: 30px;
+    font-size: 45px;
+    
+
+}
+
+.parrafo{
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-right: 50px;
+
+
+}
+
+
+.boton{
+    margin-left: 100px;
+    margin-top: 30px;
+    font-size:medium;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(224, 100, 131);
+    border-radius: 5px;
+    border-color: transparent;
+    width: 170px;
+    height: 50px;
+    
+
+}
+
+.imagen_home{
+
+    width: 450px;
+    grid-area: section;
+    margin-top: 70px;
+    margin-left: 60px;
+    
+   
+}
+
+
+/* ------------FIN DE HOME---------- */
+
+/* ------------INICIO ABOUT ME---------- */
+
+#contenido_aboutme{
+    display: flex;
+    
+    }
+
+.foto_aboutme {
+    
+    width: 400px;
+    height:400px ;
+    margin-top: 70px;
+    margin-left: 250px;
+    margin-bottom: 70px;
+   
+}
+
+.titulo_aboutme{
+    
+    margin-top: 170px;
+    margin-left: 170px;
+    color: rgb(50, 50, 129);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    
+
+}
+
+.parrafo_aboutme{
+
+    color: rgb(36, 36, 100);
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 170px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    margin-right: 300px;
+
+}
+
+
+
+
+
+/*    -------------- FOOTER ---------------   */
+
+
+
+.bottom_bar {
+    
+    background-color: rgb(255, 243, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+
+.text_blue {
+    margin-top: 60px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(57, 57, 147);
+    font-size: medium;
+    font-weight: 500;
+    margin-left: 100px;
+    margin-bottom: 70px;
+}
+
+.redes {
+    color: rgb(57, 57, 147);
+    margin-top: 40px;
+    margin-right: 100px;
+
+}
+
+.redes a i {
+    color: rgb(57, 57, 147);
+    padding: 15px;
+    font-size: 25px;
+}
+
+.redes a i:hover {
+    transform: scale(1.5);
+    transition: all 1s ease;
+
+}
+
+/*    -------------- FIN DE FOOTER ---------------   */
+
+
+/*-------------------- AQUI SE COMIENZA A IMPLEMENTAR MEDIA QUERIES--------------- */
+
+@media  screen and (max-width: 468px) {
+
+
+#grilla {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-rows: min-content min-content min-content min-content;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "section"
+        "footer"
+    ;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  
+}
+
+.logo_img{
+    justify-content:column;
+    margin-left:150px;
+    width: 250px;
+    height: 80px;
+
+}
+
+.header nav ul {
+    margin-right: 0px;
+    text-align: center;
+    font-size: 14px;
+    
+}
+
+#contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.titulo{
+    
+    margin-top: 100px;
+    margin-left: 20px;
+    font-size: 50px;
+    text-align: center;
+
+}
+
+
+.parrafo{
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    margin-right: 40px;
+    text-align: center;
+    font-size: 24px;
+    
+
+}
+
+.imagen_home {
+    margin-bottom: 60px;
+   
+}
+
+.boton{
+    margin-left: 160px;
+    margin-top: 20px;
+    font-size: 26px;
+    width: 250px;
+    height:70px;
+
+}
+
+.bottom_bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.text_blue {
+    margin-top: 70px;
+    margin-left: 100px;
+    font-size: 20px;
+}
+
+.redes {
+    margin-right: 0px;
+    margin-left: 170px;
+    margin-top: 0px;
+}
+.redes a i {
+    font-size: 35px;
+    margin-bottom: 20px;   
+}
+
+
+#contenido_aboutme{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.foto_aboutme {
+    width: 300px;
+    height:350px ;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+   
+}
+
+.titulo_aboutme{
+    margin-top: 30px;
+    margin-left: 150px;
+    
+
+}
+
+.parrafo_aboutme{
+
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-right: 30px;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+}
